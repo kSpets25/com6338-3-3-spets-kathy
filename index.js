@@ -1,39 +1,39 @@
 // Creatin the variable
 
 var questionsArr = [ 
-     {
-        question: 'Hue is the color of a shade',
+    {
+        question: 'Hue refers to the dominant color family.',
         answer: true
     },
     {
-        question: 'Chroma means the brightnss of a color',
+        question: 'Chroma means the brightnss of a color.',
         answer: false
     },
     {
-        question: 'The Value of a color is its lightness or darkness',
+        question: 'The Value of a color is its lightness or darkness.',
         answer: true
     },
     {
-        question:('Creating a color shade means you are adding white'),
+        question:('Creating a color shade means you are adding white.'),
         answer: false
     },
     {
-        question:('Addind Tint to a color means you are adding Black'),
+        question:('Addind Tint to a color means you are adding black.'),
         answer: false
     },
     {
-        question:('To use complementary colors means to use colors from the opposite sides of the color wheel'),
+        question:('To use complementary colors means to use colors from the opposite sides of the color wheel.'),
         answer: true
     },
     {
-        question: ('The three primary colors are red, yellow and blue'),
+        question: ('The three primary colors are red, yellow and blue.'),
         answer: true
     },
-    {   question:'The three secondary colors are orange, pink, and green',
+    {   question:'The three secondary colors are orange, pink, and green.',
         answer: false
     },
     {
-        question: 'Analogous colors are those next to each other on the color wheel',
+        question: 'Analogous colors are those next to each other on the color wheel.',
         answer: true
     },
     {
@@ -43,7 +43,7 @@ var questionsArr = [
 ];
 function runQuiz() {
     var numOfTrue = 0;
-    var numOfFalse =0;
+    var numOfFalse = 0;
     for (let index = 0; index < questionsArr.length; index++) {
         var questions = questionsArr[index]
         var yourAnswer = confirm(questions.question)
@@ -52,12 +52,49 @@ function runQuiz() {
         if (yourAnswer == questions.answer){
             numOfTrue++
         console.log('inifloop')
+        } else {
+            numOfFalse++  
+        console.log('inelseloop')
         }
+        console.log(numOfTrue)
+        console.log(numOfFalse)
     }
+    
+    var score = (numOfTrue / 10)
+    console.log(score)
+    
+        if  (numOfTrue === 10){
+         alert ('You answered all 10 questios correctly.')
+        } else {  
+         alert ('You answered ' + (numOfTrue) + ' qustions correctly.')
+        }   
+        console.log(score)
+        alert ('You scored ' + Math.round(score * 100) + '% of the questions correct.')
+        console.log(score)
+    
+
+        
+} 
+
+
+    
+    
+
+    
+   
+
+       
+      
+       
+         
+        
+        
+        
+
 
         
 
-}
+
         
     
    
