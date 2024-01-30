@@ -1,4 +1,4 @@
-// Creatin the variable
+
 
 var questionsArr = [ 
     {
@@ -41,36 +41,26 @@ var questionsArr = [
         answer: true
     }, 
 ];
+
 function runQuiz() {
     var numOfTrue = 0;
     var numOfFalse = 0;
     for (let index = 0; index < questionsArr.length; index++) {
         var questions = questionsArr[index]
-        var yourAnswer = confirm(questions.question)
-        console.log(yourAnswer)
-        console.log(questions.answer)
+        var yourAnswer = confirm(questions.question)        
         if (yourAnswer == questions.answer){
             numOfTrue++
-        console.log('inifloop')
         } else {
-            numOfFalse++  
-        console.log('inelseloop')
+            numOfFalse++    
         }
-        console.log(numOfTrue)
-        console.log(numOfFalse)
     }
-    
-    var score = (numOfTrue / 10)
-    console.log(score)
-    
-        if  (numOfTrue === 10){
-         alert ('You answered all 10 questios correctly.')
-        } else {  
-         alert ('You answered ' + (numOfTrue) + ' qustions correctly.')
-        }   
-        console.log(score)
-        alert ('You scored ' + Math.round(score * 100) + '% of the questions correct.')
-        console.log(score)
+
+    var scorePercent = Math.round((numOfTrue / questionsArr.length) * 100);
+        alert(`You answered ${numOfTrue} questions correctly.`);
+        console.log (numOfTrue)
+        alert(`You scored ${scorePercent}% of the questions correct.`);
+        console.log (scorePercent)
+
     
 
         
