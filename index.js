@@ -59,11 +59,7 @@ function runQuiz() {
         alert(`You answered ${numOfTrue} questions correctly.`);
         console.log (numOfTrue)
         alert(`You scored ${scorePercent}% of the questions correct.`);
-        console.log (scorePercent)
-
-    
-
-        
+        console.log (scorePercent)      
 } 
 
 
